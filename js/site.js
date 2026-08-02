@@ -70,15 +70,4 @@
   }
   initGalTrack(document.getElementById('gal-vertical'), 17, 1);
   initGalTrack(document.getElementById('gal-horizontal'), 20, -1);
-
-  // Newsletter: troca o formulário pela confirmação.
-  // Ligue ao seu provedor de e-mail (Mailchimp, Brevo…) trocando o corpo deste handler.
-  var form = document.querySelector('[data-newsletter]');
-  if (form) form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var ok = document.createElement('p');
-    ok.style.cssText = 'font:500 15px/1.6 var(--font-body);color:var(--md-rosa);margin:0;flex:1 1 260px';
-    ok.textContent = 'Prontinho! O e-book está a caminho do seu e-mail.';
-    form.replaceWith(ok);
-  });
 })();

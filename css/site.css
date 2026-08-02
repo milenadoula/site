@@ -74,6 +74,8 @@ img{max-width:100%}
 }
 
 @keyframes md-bob{0%,100%{transform:translate(0,0)}50%{transform:translate(0,-18px)}}
+@keyframes md-glow{0%,100%{box-shadow:0 0 0 0 rgba(200,168,130,.38)}50%{box-shadow:0 0 0 12px rgba(200,168,130,0)}}
+@keyframes md-gift-bounce{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-4px) rotate(6deg)}}
 @keyframes md-pulse{0%{box-shadow:0 4px 20px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 4px 20px rgba(37,211,102,.45),0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 4px 20px rgba(37,211,102,.45),0 0 0 0 rgba(37,211,102,0)}}
 
 /* estados de hover do design (gerados a partir dos componentes) */
