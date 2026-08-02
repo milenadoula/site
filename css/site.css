@@ -58,7 +58,7 @@ img{max-width:100%}
 .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
 .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-@media (max-width:860px){
+@media (max-width:980px){
   .nav-toggle{display:flex}
   .nav-links{display:none !important;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0 !important;background:var(--branco-quente);border-bottom:1px solid var(--md-borda);padding:8px 24px 20px;box-shadow:0 12px 24px rgba(61,46,30,.1)}
   .nav-links.is-open{display:flex !important}
