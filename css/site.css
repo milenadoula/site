@@ -12,6 +12,22 @@ img{max-width:100%}
 
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:14.5px;padding:13px 26px;border:none;cursor:pointer;text-decoration:none;border-radius:var(--radius-pill);transition:background .2s,transform .15s,box-shadow .2s}
 .btn:hover{transform:translateY(-2px)}
+
+/* dinamismo: ícones dos cards flutuam suavemente, e ganham vida ao passar o mouse */
+.ico-pop{display:inline-block;animation:md-icon-float 3.6s ease-in-out infinite;transition:transform .25s var(--ease-standard)}
+.ico-pop:hover{transform:scale(1.22) rotate(-6deg)}
+@keyframes md-icon-float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-5px) rotate(-4deg)}}
+@media (prefers-reduced-motion:reduce){.ico-pop{animation:none}}
+
+/* links do menu: sublinhado animado ao passar o mouse */
+.nav-links a:not(.btn){position:relative}
+.nav-links a:not(.btn)::after{content:'';position:absolute;left:0;right:100%;bottom:-4px;height:2px;background:currentColor;transition:right .28s var(--ease-standard)}
+.nav-links a:not(.btn):hover::after{right:0}
+
+/* fotos: leve zoom ao passar o mouse, para dar vida aos cards */
+.foto-zoom{overflow:hidden}
+.foto-zoom img{transition:transform .5s var(--ease-standard)}
+.foto-zoom:hover img{transform:scale(1.06)}
 .btn-sm{font-size:13px;padding:10px 20px}
 .btn-primary{background:var(--brand-solid);color:var(--brand-on-solid);box-shadow:var(--shadow-sm)}
 .btn-primary:hover{background:var(--md-rosa-hover);color:var(--brand-on-solid);box-shadow:var(--shadow-md)}
