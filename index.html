@@ -232,13 +232,9 @@
 </div>
 <span style="font:600 12px/1 var(--font-body);color:var(--cafe-claro);background:var(--branco-quente);border:1px solid var(--md-borda);border-radius:100px;padding:9px 16px">feed automático</span>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;padding-top:20px">
-<div style="aspect-ratio:1;border-radius:14px;overflow:hidden;transition:transform .25s var(--ease-standard)" class="x26"><img class="foto-slot" src="assets/social/ig-1.jpg" alt="post 1" loading="lazy"></div>
-<div style="aspect-ratio:1;border-radius:14px;overflow:hidden;transition:transform .25s var(--ease-standard)" class="x27"><img class="foto-slot" src="assets/social/ig-2.jpg" alt="post 2" loading="lazy"></div>
-<div style="aspect-ratio:1;border-radius:14px;overflow:hidden;transition:transform .25s var(--ease-standard)" class="x28"><img class="foto-slot" src="assets/social/ig-3.jpg" alt="post 3" loading="lazy"></div>
-<div style="aspect-ratio:1;border-radius:14px;overflow:hidden;transition:transform .25s var(--ease-standard)" class="x29"><img class="foto-slot" src="assets/social/ig-4.jpg" alt="post 4" loading="lazy"></div>
-<div style="aspect-ratio:1;border-radius:14px;overflow:hidden;transition:transform .25s var(--ease-standard)" class="x30"><img class="foto-slot" src="assets/social/ig-5.jpg" alt="post 5" loading="lazy"></div>
-<div style="aspect-ratio:1;border-radius:14px;overflow:hidden;transition:transform .25s var(--ease-standard)" class="x31"><img class="foto-slot" src="assets/social/ig-6.jpg" alt="post 6" loading="lazy"></div>
+<div style="padding-top:20px">
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-8093bae5-9188-4fc4-af70-1f6b6b6f9c6f" data-elfsight-app-lazy></div>
 </div>
 </div>
 
@@ -251,16 +247,37 @@
 </div>
 
 
-<form id="ebook-form" method="POST" action="https://1e0d12fc.sibforms.com/serve/MUIFAJsUFKlo383DoRylel_-XstTsuYHL7xhAK3elGAEXMwSpQZ1nA6FBhdufR2gNTNrBihn59g2IQcxuFQJPXsS67JYvvtfTZM3NnKhNhgbxvCc_fcW1HTPT6xZ8JuhnpOvDWOrBkl3qgkt80ib8Zjx12Ozr_HvAoG-3jO2uGnENfUrPrSeLPkhGvlOodGAM4n4fDRk8CwGvxw-TA==" target="brevo-submit-frame" style="display:flex;gap:10px;flex:1 1 320px;flex-wrap:wrap">
-<input type="email" id="ebook-email" name="EMAIL" required="required" autocomplete="email" placeholder="seu melhor e-mail" style="flex:1 1 180px;min-width:0;padding:14px 18px;border:1px solid var(--md-borda);border-radius:100px;font:400 14.5px var(--font-body);color:var(--cafe);background:var(--branco);outline:none;transition:border-color .2s" class="x32">
-<button id="ebook-submit" type="submit" style="border:none;cursor:pointer;background:var(--marrom);color:#fff;font:600 14.5px var(--font-body);padding:14px 26px;border-radius:100px;transition:background .2s,transform .2s" class="x33">Quero receber</button>
-<input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+<form data-newsletter="1" action="https://1e0d12fc.sibforms.com/serve/MUIFAJsUFKlo383DoRylel_-XstTsuYHL7xhAK3elGAEXMwSpQZ1nA6FBhdufR2gNTNrBihn59g2IQcxuFQJPXsS67JYvvtfTZM3NnKhNhgbxvCc_fcW1HTPT6xZ8JuhnpOvDWOrBkl3qgkt80ib8Zjx12Ozr_HvAoG-3jO2uGnENfUrPrSeLPkhGvlOodGAM4n4fDRk8CwGvxw-TA==" method="POST" target="brevo-hidden-frame" style="display:flex;gap:10px;flex:1 1 320px;flex-wrap:wrap">
+<input type="email" name="EMAIL" required="required" placeholder="seu melhor e-mail" style="flex:1 1 180px;min-width:0;padding:14px 18px;border:1px solid var(--md-borda);border-radius:100px;font:400 14.5px var(--font-body);color:var(--cafe);background:var(--branco);outline:none;transition:border-color .2s" class="x32">
+<input type="hidden" name="email_address_check" value="">
 <input type="hidden" name="locale" value="pt">
-<p id="ebook-form-message" aria-live="polite" style="display:none;flex:1 0 100%;margin:2px 0 0;font:500 13px/1.45 var(--font-body);color:var(--cafe)"></p>
+<button type="submit" style="border:none;cursor:pointer;background:var(--marrom);color:#fff;font:600 14.5px var(--font-body);padding:14px 26px;border-radius:100px;transition:background .2s,transform .2s" class="x33">Quero receber</button>
 </form>
-<iframe name="brevo-submit-frame" id="brevo-submit-frame" title="Envio do formulário" hidden></iframe>
+<iframe name="brevo-hidden-frame" id="brevo-hidden-frame" style="display:none" title="envio"></iframe>
 
 </div>
+
+<script>
+(function(){
+  var form = document.querySelector('form[data-newsletter="1"]');
+  var iframe = document.getElementById('brevo-hidden-frame');
+  if(!form || !iframe) return;
+  var enviando = false;
+  form.addEventListener('submit', function(){
+    enviando = true;
+  });
+  iframe.addEventListener('load', function(){
+    if(!enviando) return;
+    enviando = false;
+    var wrap = form.parentElement;
+    form.style.display = 'none';
+    var msg = document.createElement('p');
+    msg.textContent = 'Prontinho! O ebook foi enviado para o seu e-mail. ✓';
+    msg.style.cssText = "font:600 15px var(--font-body);color:var(--marrom);margin:0;flex:1 1 320px";
+    wrap.appendChild(msg);
+  });
+})();
+</script>
 
 </section>
 </div>
@@ -312,54 +329,5 @@
 
 </div>
 <script src="js/site.js"></script>
-<script>
-(function () {
-  const form = document.getElementById('ebook-form');
-  const email = document.getElementById('ebook-email');
-  const button = document.getElementById('ebook-submit');
-  const message = document.getElementById('ebook-form-message');
-  const frame = document.getElementById('brevo-submit-frame');
-  let submissionPending = false;
-
-  document.addEventListener('submit', function (event) {
-    if (event.target !== form) return;
-
-    event.stopImmediatePropagation();
-    submissionPending = true;
-    button.disabled = true;
-    button.textContent = 'Enviando…';
-    button.style.cursor = 'wait';
-    button.style.opacity = '.75';
-    message.style.display = 'none';
-  }, true);
-
-  frame.addEventListener('load', function () {
-    if (!submissionPending) return;
-
-    submissionPending = false;
-    form.reset();
-    button.disabled = false;
-    button.textContent = 'Quero receber';
-    button.style.cursor = 'pointer';
-    button.style.opacity = '1';
-    message.textContent = 'Pronto! O e-book será enviado para o seu e-mail.';
-    message.style.color = 'var(--cafe)';
-    message.style.display = 'block';
-    email.focus();
-  });
-
-  window.addEventListener('offline', function () {
-    if (!submissionPending) return;
-    submissionPending = false;
-    button.disabled = false;
-    button.textContent = 'Quero receber';
-    button.style.cursor = 'pointer';
-    button.style.opacity = '1';
-    message.textContent = 'Não foi possível enviar agora. Verifique sua conexão e tente novamente.';
-    message.style.color = '#8a2f2f';
-    message.style.display = 'block';
-  });
-})();
-</script>
 </body>
 </html>
