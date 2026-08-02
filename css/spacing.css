@@ -1,0 +1,30 @@
+:root{
+  /* spacing scale (px, matches site's real values) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 56px;
+  --space-10: 64px;
+  --space-11: 88px;
+  --space-12: 104px;
+
+  /* radii — brand language is fluid/organic: pills for buttons, generous rounding for cards */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-pill: 100px;
+  --radius-circle: 50%;
+
+  --container-max: 1120px;
+  --container-max-wide: 1200px;
+
+  --ease-standard: cubic-bezier(0.25,0.46,0.45,0.94); /* @kind other */
+  --duration-fast: 0.2s; /* @kind other */
+  --duration-base: 0.7s; /* @kind other */
+}

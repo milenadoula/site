@@ -1,0 +1,57 @@
+:root{
+  /* ── shared neutrals (both brands) ── */
+  --marrom: #3d2e1e;       /* deepest brown — primary text, dark surfaces */
+  --cafe: #584534;         /* body text */
+  --cafe-claro: #8a7060;   /* secondary/muted text */
+  --branco: #ffffff;
+  --branco-quente: #f9f6f3;/* warm off-white — Milena Doula page bg */
+  --off-white: #fafafa;    /* neutral off-white — Amor de Leite page bg */
+  --neutro: #e8e0d8;       /* neutral divider/placeholder fill */
+
+  /* ── Milena Doula (mother brand) — rosa/pêssego/café ── */
+  --md-rosa: #b84d4d;
+  --md-rosa-hover: #a33f3f;
+  --md-pessego: #fcf3ec;
+  --md-dourado: #c8a882;
+  --md-borda: #e0d4c8;
+
+  /* ── Amor de Leite (child brand) — amarelo pastel ── */
+  --al-amarelo: #FFEC8B;
+  --al-amarelo-hover: #FFE566;
+  --al-amarelo-claro: #FFFDE0;
+  --al-amarelo-texto: #9A7C00;
+  --al-borda: #d8d0c0;
+
+  /* ── semantic aliases — default theme: Milena Doula ── */
+  --brand-solid: var(--md-rosa);
+  --brand-solid-hover: var(--md-rosa-hover);
+  --brand-on-solid: #ffffff;
+  --brand-eyebrow: var(--md-dourado);
+  --brand-soft: var(--md-pessego);
+  --brand-soft-border: var(--md-borda);
+  --section-bg: var(--branco-quente);
+
+  --text-primary: var(--marrom);
+  --text-secondary: var(--cafe);
+  --text-muted: var(--cafe-claro);
+  --surface-page: var(--branco-quente);
+  --surface-card: var(--branco);
+  --border-default: var(--md-borda);
+
+  --shadow-color: 61,46,30;
+  --shadow-sm: 0 4px 24px rgba(var(--shadow-color),0.08);
+  --shadow-md: 0 10px 40px rgba(var(--shadow-color),0.14);
+
+  --wa-green: #25D366;
+}
+
+/* Amor de Leite theme override — apply .tema-amarelo to a section/card to switch brand accent */
+.tema-amarelo{
+  --brand-solid: var(--al-amarelo);
+  --brand-solid-hover: var(--al-amarelo-hover);
+  --brand-on-solid: var(--marrom);
+  --brand-eyebrow: var(--al-amarelo-texto);
+  --brand-soft: var(--al-amarelo-claro);
+  --brand-soft-border: var(--al-borda);
+  --section-bg: var(--branco);
+}
