@@ -47,6 +47,13 @@ img{max-width:100%}
 @keyframes md-marquee{0%{transform:translateX(0)}100%{transform:translateX(calc(-50% - 9px))}}
 @media (prefers-reduced-motion:reduce){.depo-track-inner{animation:none}}
 
+/* galeria: carrossel horizontal com rolagem automática + arraste manual */
+.gal-track{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab}
+.gal-track::-webkit-scrollbar{display:none}
+.gal-track:active{cursor:grabbing}
+.gal-track-inner{display:flex;gap:14px;width:max-content}
+.gal-track-inner img{pointer-events:none;-webkit-user-drag:none}
+
 [data-reveal="1"]{opacity:0;transform:translateY(26px)}
 [data-reveal="1"].visivel{opacity:1;transform:none;transition:opacity .62s cubic-bezier(.22,1,.36,1),transform .62s cubic-bezier(.22,1,.36,1)}
 @media (prefers-reduced-motion:reduce){[data-reveal="1"]{opacity:1;transform:none}}
