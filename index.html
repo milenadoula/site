@@ -11,12 +11,13 @@
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-<nav style="position:sticky;top:0;z-index:100;background:rgba(249,246,243,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--md-borda);padding:12px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+<nav class="site-nav" style="position:sticky;top:0;z-index:100;background:rgba(249,246,243,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--md-borda);padding:12px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px">
 <a href="index.html" style="display:flex;flex-direction:column;line-height:1.05;text-decoration:none;transition:opacity .2s" class="x1">
 <span style="font-family:'Fraunces',serif;font-variation-settings:'SOFT' 40,'WONK' 1;font-weight:500;font-size:24px;color:var(--marrom);letter-spacing:-.01em">Milena Doula</span>
 <span style="font-family:var(--font-body);font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cafe-claro);margin-top:4px">cuidado materno-infantil · maringá</span>
 </a>
-<div style="display:flex;align-items:center;gap:26px;flex-wrap:wrap">
+<button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+<div class="nav-links" style="display:flex;align-items:center;gap:26px;flex-wrap:wrap">
 <a href="index.html" style="font-size:13.5px;font-weight:500;text-decoration:none;transition:color .2s;color:var(--md-rosa)" class="x2">Início</a>
 <a href="doulagem.html" style="font-size:13.5px;font-weight:500;text-decoration:none;transition:color .2s;color:var(--cafe)" class="x3">Doulagem</a>
 <a href="amamentacao.html" style="font-size:13.5px;font-weight:500;text-decoration:none;transition:color .2s;color:var(--cafe)" class="x4">Amamentação</a>
@@ -165,12 +166,13 @@
 <div style="max-width:1160px;margin:0 auto;padding:80px 0 80px 32px">
 <div data-reveal="1" style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding-right:32px;flex-wrap:wrap;margin-bottom:10px">
 <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(1.6rem,3.6vw,2.2rem);color:var(--marrom);margin:0">O que as famílias dizem</h2>
-<span style="font:400 12.5px/1 var(--font-body);color:var(--cafe-claro)">arraste para o lado →</span>
+
 </div>
 <p data-reveal="1" style="font:400 14.5px/1.6 var(--font-body);color:var(--cafe-claro);margin:0 32px 30px 0;max-width:520px">Prints reais de WhatsApp e Instagram, do jeito que chegaram.</p>
-<div style="display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 32px 24px 0">
+<div class="depo-track">
+<div class="depo-track-inner">
 <figure style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s" class="x20">
-<div style="width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
 <img class="foto-slot" src="assets/social/depoimento_parto.png" alt="depoimento sobre parto" loading="lazy">
 </div>
 <figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
@@ -178,7 +180,7 @@
 </figcaption>
 </figure>
 <figure style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s" class="x21">
-<div style="width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
 <img class="foto-slot" src="assets/social/depoimento_consultoria.png" alt="depoimento sobre consultoria em amamentação" loading="lazy">
 </div>
 <figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
@@ -186,7 +188,7 @@
 </figcaption>
 </figure>
 <figure style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s" class="x22">
-<div style="width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
 <img class="foto-slot" src="assets/social/depoimento_consultoria_2.png" alt="depoimento sobre consultoria em amamentação" loading="lazy">
 </div>
 <figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
@@ -194,7 +196,7 @@
 </figcaption>
 </figure>
 <figure style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s" class="x23">
-<div style="width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
 <img class="foto-slot" src="assets/social/depoimento_doula_4.png" alt="depoimento sobre doulagem" loading="lazy">
 </div>
 <figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
@@ -202,7 +204,7 @@
 </figcaption>
 </figure>
 <figure style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s" class="x24">
-<div style="width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
 <img class="foto-slot" src="assets/social/depoimento_doula_5.png" alt="depoimento sobre doulagem" loading="lazy">
 </div>
 <figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
@@ -210,7 +212,7 @@
 </figcaption>
 </figure>
 <figure style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s">
-<div style="width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
 <img class="foto-slot" src="assets/social/depoimento_doula_6.png" alt="depoimento sobre doulagem" loading="lazy">
 </div>
 <figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
@@ -218,7 +220,7 @@
 </figcaption>
 </figure>
 <figure style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s">
-<div style="width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
 <img class="foto-slot" src="assets/social/depoimento_doula_7.png" alt="depoimento sobre doulagem" loading="lazy">
 </div>
 <figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
@@ -226,7 +228,7 @@
 </figcaption>
 </figure>
 <figure style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s">
-<div style="width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
 <img class="foto-slot" src="assets/social/depoimento_doula_8.png" alt="depoimento sobre doulagem" loading="lazy">
 </div>
 <figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
@@ -234,13 +236,86 @@
 </figcaption>
 </figure>
 <figure style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s">
-<div style="width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
 <img class="foto-slot" src="assets/social/depoimento_parto_2_consultoria_3.png" alt="depoimento sobre parto e consultoria" loading="lazy">
 </div>
 <figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
 <span style="width:7px;height:7px;border-radius:50%;background:var(--wa-green);flex:none"></span>Depoimento · parto e consultoria
 </figcaption>
 </figure>
+<figure aria-hidden="true" style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s" class="x20">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<img class="foto-slot" src="assets/social/depoimento_parto.png" alt="depoimento sobre parto" loading="lazy">
+</div>
+<figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
+<span style="width:7px;height:7px;border-radius:50%;background:var(--md-rosa);flex:none"></span>Depoimento · doulagem no parto
+</figcaption>
+</figure>
+<figure aria-hidden="true" style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s" class="x21">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<img class="foto-slot" src="assets/social/depoimento_consultoria.png" alt="depoimento sobre consultoria em amamentação" loading="lazy">
+</div>
+<figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
+<span style="width:7px;height:7px;border-radius:50%;background:var(--wa-green);flex:none"></span>Depoimento · consultoria em amamentação
+</figcaption>
+</figure>
+<figure aria-hidden="true" style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s" class="x22">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<img class="foto-slot" src="assets/social/depoimento_consultoria_2.png" alt="depoimento sobre consultoria em amamentação" loading="lazy">
+</div>
+<figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
+<span style="width:7px;height:7px;border-radius:50%;background:var(--wa-green);flex:none"></span>Depoimento · consultoria em amamentação
+</figcaption>
+</figure>
+<figure aria-hidden="true" style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s" class="x23">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<img class="foto-slot" src="assets/social/depoimento_doula_4.png" alt="depoimento sobre doulagem" loading="lazy">
+</div>
+<figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
+<span style="width:7px;height:7px;border-radius:50%;background:var(--md-rosa);flex:none"></span>Depoimento · doulagem
+</figcaption>
+</figure>
+<figure aria-hidden="true" style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s" class="x24">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<img class="foto-slot" src="assets/social/depoimento_doula_5.png" alt="depoimento sobre doulagem" loading="lazy">
+</div>
+<figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
+<span style="width:7px;height:7px;border-radius:50%;background:var(--md-rosa);flex:none"></span>Depoimento · doulagem
+</figcaption>
+</figure>
+<figure aria-hidden="true" style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<img class="foto-slot" src="assets/social/depoimento_doula_6.png" alt="depoimento sobre doulagem" loading="lazy">
+</div>
+<figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
+<span style="width:7px;height:7px;border-radius:50%;background:var(--md-rosa);flex:none"></span>Depoimento · doulagem
+</figcaption>
+</figure>
+<figure aria-hidden="true" style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<img class="foto-slot" src="assets/social/depoimento_doula_7.png" alt="depoimento sobre doulagem" loading="lazy">
+</div>
+<figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
+<span style="width:7px;height:7px;border-radius:50%;background:var(--md-rosa);flex:none"></span>Depoimento · doulagem
+</figcaption>
+</figure>
+<figure aria-hidden="true" style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<img class="foto-slot" src="assets/social/depoimento_doula_8.png" alt="depoimento sobre doulagem" loading="lazy">
+</div>
+<figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
+<span style="width:7px;height:7px;border-radius:50%;background:var(--md-rosa);flex:none"></span>Depoimento · doulagem
+</figcaption>
+</figure>
+<figure aria-hidden="true" style="flex:0 0 288px;scroll-snap-align:start;margin:0;background:var(--branco);border:1px solid var(--md-borda);border-radius:20px;padding:14px;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease-standard),box-shadow .25s">
+<div style="width:100%;border-radius:12px;overflow:hidden;background:var(--branco-quente)">
+<img class="foto-slot" src="assets/social/depoimento_parto_2_consultoria_3.png" alt="depoimento sobre parto e consultoria" loading="lazy">
+</div>
+<figcaption style="display:flex;align-items:center;gap:8px;padding:14px 6px 4px;font:400 12.5px/1.4 var(--font-body);color:var(--cafe-claro)">
+<span style="width:7px;height:7px;border-radius:50%;background:var(--wa-green);flex:none"></span>Depoimento · parto e consultoria
+</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </section>

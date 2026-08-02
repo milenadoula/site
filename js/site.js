@@ -15,6 +15,29 @@
     setTimeout(function () { els.forEach(function (el) { el.classList.add('visivel'); }); }, 2500);
   }
 
+  // Menu mobile (hambúrguer).
+  var navToggle = document.querySelector('.nav-toggle');
+  var navLinks = document.querySelector('.nav-links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function () {
+      var open = navLinks.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navLinks.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        navLinks.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Carrossel de depoimentos: pausa a rolagem automática ao tocar (mobile).
+  var depoInner = document.querySelector('.depo-track-inner');
+  if (depoInner) {
+    depoInner.addEventListener('touchstart', function () { depoInner.classList.add('pausado'); }, { passive: true });
+    depoInner.addEventListener('touchend', function () { depoInner.classList.remove('pausado'); });
+  }
+
   // Newsletter: troca o formulário pela confirmação.
   // Ligue ao seu provedor de e-mail (Mailchimp, Brevo…) trocando o corpo deste handler.
   var form = document.querySelector('[data-newsletter]');
