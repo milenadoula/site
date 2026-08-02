@@ -68,8 +68,8 @@
       track.addEventListener(ev, scheduleResume, { passive: true });
     });
   }
-  initGalTrack(document.getElementById('gal-vertical'), 26, 1);
-  initGalTrack(document.getElementById('gal-horizontal'), 30, -1);
+  initGalTrack(document.getElementById('gal-vertical'), 17, 1);
+  initGalTrack(document.getElementById('gal-horizontal'), 20, -1);
 
   // Newsletter: troca o formulário pela confirmação.
   // Ligue ao seu provedor de e-mail (Mailchimp, Brevo…) trocando o corpo deste handler.
