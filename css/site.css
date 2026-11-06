@@ -216,3 +216,8 @@ img{max-width:100%}
 .x119:hover{transform:translateY(-5px) !important}
 .x120:hover{border-color:var(--marrom) !important;color:var(--marrom) !important;transform:translateY(-2px) !important}
 .x121:hover{border-color:var(--marrom) !important;color:var(--marrom) !important;transform:translateY(-2px) !important}
+
+/* Cards de serviços com navegação nativa e foco de teclado visível. */
+.service-card{color:var(--cafe);text-decoration:none}
+.service-card:hover{color:var(--cafe)}
+.service-card:focus-visible{outline:3px solid var(--md-rosa);outline-offset:4px}
